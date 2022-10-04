@@ -1,0 +1,62 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.4816875 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 2.4816875 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.03291500606746706 
+            text = "" 
+        intervals [2]:
+            xmin = 0.03291500606746706 
+            xmax = 0.30747728219885456 
+            text = "cada" 
+        intervals [3]:
+            xmin = 0.30747728219885456 
+            xmax = 0.5079513250884391 
+            text = "dia" 
+        intervals [4]:
+            xmin = 0.5079513250884391 
+            xmax = 0.6357898451919423 
+            text = "me" 
+        intervals [5]:
+            xmin = 0.6357898451919423 
+            xmax = 0.7084253679780236 
+            text = "" 
+        intervals [6]:
+            xmin = 0.7084253679780236 
+            xmax = 0.975724091830803 
+            text = "pongo" 
+        intervals [7]:
+            xmin = 0.975724091830803 
+            xmax = 1.3127529175582204 
+            text = "mas" 
+        intervals [8]:
+            xmin = 1.3127529175582204 
+            xmax = 1.8052217620478521 
+            text = "nervioso" 
+        intervals [9]:
+            xmin = 1.8052217620478521 
+            xmax = 1.9475873867085716 
+            text = "por" 
+        intervals [10]:
+            xmin = 1.9475873867085716 
+            xmax = 2.0623515127105803 
+            text = "la" 
+        intervals [11]:
+            xmin = 2.0623515127105803 
+            xmax = 2.4197182848181003 
+            text = "prueba" 
+        intervals [12]:
+            xmin = 2.4197182848181003 
+            xmax = 2.4816875 
+            text = "" 

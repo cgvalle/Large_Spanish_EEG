@@ -1,0 +1,3 @@
+bad_channels
+T8
+FT8

@@ -1,0 +1,4 @@
+bad_channels
+T8
+FT7
+FC5

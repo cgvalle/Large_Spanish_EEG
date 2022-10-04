@@ -1,0 +1,70 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.6895416666666665 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 2.6895416666666665 
+        intervals: size = 14 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.052990015294012975 
+            text = "" 
+        intervals [2]:
+            xmin = 0.052990015294012975 
+            xmax = 0.2529365892013788 
+            text = "si" 
+        intervals [3]:
+            xmin = 0.2529365892013788 
+            xmax = 0.39620539412712913 
+            text = "no" 
+        intervals [4]:
+            xmin = 0.39620539412712913 
+            xmax = 0.4702013702975716 
+            text = "" 
+        intervals [5]:
+            xmin = 0.4702013702975716 
+            xmax = 0.8008216893569954 
+            text = "pasa" 
+        intervals [6]:
+            xmin = 0.8008216893569954 
+            xmax = 0.8795408129425725 
+            text = "" 
+        intervals [7]:
+            xmin = 0.8795408129425725 
+            xmax = 1.0590204147176883 
+            text = "esa" 
+        intervals [8]:
+            xmin = 1.0590204147176883 
+            xmax = 1.5045706542120547 
+            text = "micro" 
+        intervals [9]:
+            xmin = 1.5045706542120547 
+            xmax = 1.6730295786851896 
+            text = "" 
+        intervals [10]:
+            xmin = 1.6730295786851896 
+            xmax = 1.8257446784412092 
+            text = "me" 
+        intervals [11]:
+            xmin = 1.8257446784412092 
+            xmax = 1.9800341606689404 
+            text = "voy" 
+        intervals [12]:
+            xmin = 1.9800341606689404 
+            xmax = 2.2051708541236907 
+            text = "en" 
+        intervals [13]:
+            xmin = 2.2051708541236907 
+            xmax = 2.527919260824557 
+            text = "metro" 
+        intervals [14]:
+            xmin = 2.527919260824557 
+            xmax = 2.6895416666666665 
+            text = "" 

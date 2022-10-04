@@ -1,0 +1,4 @@
+bad_channels
+T7
+C5
+F6
