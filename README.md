@@ -11,7 +11,6 @@ Authors
 
 Resources:
 <ul>
-    <li>Code availaible at: https://github.com/CarlosValleA/Large_Spanish_EEG</li>
     <li>Publication: </li>
 </ul>
 
