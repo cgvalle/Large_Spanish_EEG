@@ -1,3 +1,4 @@
 .DS_Store
 ds004279-download
 *.npz
+.ipynb_checkpoints/
