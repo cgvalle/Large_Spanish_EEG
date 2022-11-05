@@ -1,3 +1,0 @@
-bad_channels
-T7
-TP7

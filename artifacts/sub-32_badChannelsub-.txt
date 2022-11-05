@@ -1,4 +1,0 @@
-bad_channels
-CB1
-O1
-CB2
