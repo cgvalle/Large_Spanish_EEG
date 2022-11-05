@@ -108,21 +108,20 @@ def pre_processing(raw, l_freq, h_freq, reference='average', only_language=True)
     return raw
 
 # Step 6. Crete epochs
-def create_epochs(raw, EPOCHS, subject):
+def create_epochs(raw, EPOCHS, subject, session):
     # Creates epochs for each perception, production, rest and preparation
     
     # Bad events are automatically dropped
     events, event_id = mne.events_from_annotations(raw, verbose=False)
     
-    print(event_id)
-    print(events)    
-    
-    
+    # Get duration of each condition
     condition_duration = defaultdict(list)
     for annot in raw.annotations:
         condition_duration[annot['description'].split('_')[0]].append(annot['duration'])
     
-
+    
+    subject = int(subject.replace('sub-', ''))
+    session = int(session.replace('ses-', ''))
     
     
     for condition in ['rest', 'perception', 'preparation', 'production']:   
@@ -147,7 +146,12 @@ def create_epochs(raw, EPOCHS, subject):
             temp_epoch.load_data()
             temp_epoch.resample(250, verbose=True)
 
-            EPOCHS[f"{subject}_{condition}_{stim}"] = temp_epoch
+            # Subjects with multiple sessions get a letter to indicate the session
+            if subject == 57 or subject == 63:
+                subject = f"S{subject}{'abcd'[session-1]}"
+
+            
+            EPOCHS[f"S{subject}_{condition}_{stim}"] = temp_epoch
     
     return EPOCHS
     
@@ -174,7 +178,7 @@ def remove_ica_componenets(raw, subject, session, rejection_coinfidence=0.95):
     for index, (label, confidence) in enumerate(zip(ica_dict['labels'], ica_dict['y_pred_proba'])):
         # Do not remove brain signals
         if label == 'brain':
-            print(index, f" {confidence:.2f} {label} {'*'*20}")
+            print(index, f" {confidence:.2f} {label} {'+'*20}")
             continue
 
         if confidence >= rejection_coinfidence:
@@ -209,12 +213,6 @@ if __name__ == '__main__':
     l_freq = 2
     h_freq = 50
 
-
-    
-
-    subjects = sorted([s for s in  os.listdir(DATASET_FOLDER_PATH) if 'sub-' in s])
-    subjects = subjects[:4]
-    
     # Find subject and sessions
     subjects_and_sessions = []  # Tuple of subject number and session number
     for sub in os.listdir(DATASET_FOLDER_PATH):
@@ -224,12 +222,11 @@ if __name__ == '__main__':
                     subjects_and_sessions.append((sub, ses)) 
     
     
-    subjects_and_sessions = subjects_and_sessions[:4]
 
     EPOCHS = {}
     # Step 1. Load data
     for subject, session in tqdm(subjects_and_sessions):
-        print(subject)
+        print(subject, session)
         raw = load_subject(subject, session, DATASET_FOLDER_PATH, preload=True)  # triggers_sequencial
         
         # Step 2. Add montage to data
@@ -239,11 +236,11 @@ if __name__ == '__main__':
         raw = remove_ica_componenets(raw, subject, session, rejection_coinfidence=0.95)
     
         # Step 5. Pre-process data
-        #raw = pre_processing(raw, l_freq=l_freq, h_freq=h_freq, reference='average', only_language=True)
+        raw = pre_processing(raw, l_freq=l_freq, h_freq=h_freq, reference='average', only_language=True)
         
         # Step 6. Create epochs
         # TODO: Darle una mirada y hacer un par de analysis con los epochs para ver que sale
-        create_epochs(raw, EPOCHS, subject)
+        create_epochs(raw, EPOCHS, subject, session)
         
         
     # Step 7. Save data
