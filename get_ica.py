@@ -72,7 +72,7 @@ if __name__ == '__main__':
     
     ica_raw = raw.copy()
     ica_raw.load_data()
-    ica_raw.filter(l_freq=1, h_freq=None)
+    ica_raw.filter(l_freq=1, h_freq=100)
 
     # Step 5. Pre-process data
     raw = pre_processing(raw, l_freq=l_freq, h_freq=h_freq, reference='average', only_language=False)
