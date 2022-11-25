@@ -78,7 +78,7 @@ if __name__ == '__main__':
     raw = pre_processing(raw, l_freq=l_freq, h_freq=h_freq, reference='average', only_language=False)
 
     # Step 6. Run ICA
-    n_components = 5 
+    n_components = 45 
     ica = ICA(n_components=n_components, max_iter='auto', random_state=42, method='infomax', fit_params=dict(extended=True))
     ica.fit(ica_raw)
 
