@@ -42,9 +42,8 @@ Cite:
 
 
 
-# Repository content
-To download the dataset you can use the tools provided by openNeuro
-
+# Download dataset
+The dataset is hosted on [OpenNeuro](https://openneuro.org/datasets/ds004279). To download the dataset you can use the tools provided by openNeuro 
 
 **Download from AWS S3**
 ```
@@ -62,8 +61,8 @@ datalad install https://openneuro.org/git/1/ds004279
 ```
 
 
-To recreate the experiments, you first need to run `main_pipeline.py` followed by any of the `three model_*.ipynb`.
 ## Files
+To recreate the experiments, you first need to run `main_pipeline.py` followed by any of the `three model_*.ipynb`.
 * `main_pipeline.py` : Contains all the details in terms of signal processing, epochs creating, artifact removal and ica decomposition. This script generates an `.npy` file that can be read in the notebooks.
 * `model_*.ipynb`: Contains the experiments for condition classification (rest, perception and production), pairs of sentences and window size effect in the decoding accuracy.
 
