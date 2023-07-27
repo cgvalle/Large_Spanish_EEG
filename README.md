@@ -1,4 +1,4 @@
-# Large_Spanish_EEG
+# Large Spanish EEG
 
 EEG: silent and perceive speech on 30 spanish sentences 
 
@@ -6,23 +6,40 @@ Large Spanish Speech EEG [dataset](https://openneuro.org/datasets/ds004279)
 Authors
 <ul>
   <li>Carlos Valle</li>
-  <li>Carolina Mendez-Orellana</li>
+  <li>Carolina Méndez-Orellana</li>
   <li>María Rodríguez-Fernández</li>
 </ul>
 
 
-Resources:
-<ul>
-    <li>Publication: </li>
-</ul>
+
+The dataset is part of a publication by the authors: Carlos Valle, Carolina Méndez-Orellana, María Rodríguez-Fernández and Christian Herff
+
+---
+### **Subject-independent decoding of perceived sentences from EEG signals using artificial neural networks**
 
 Abstract:
 Decoding speech from brain activity can enable communication for individuals with speech disorders. Deep neural networks have shown great potential for speech decoding applications, but the large data sets required for these models are usually not available for neural recordings of speech impaired subjects. Harnessing data from other participants would thus be ideal to create speech neuroprostheses without the need of patient-specific training data.
 In this study, we recorded 60 sessions from 56 healthy participants using 64 EEG channels and developed a neural network capable of subject-independent classification of perceived sentences. We found that sentence identity can be decoded from subjects without prior training achieving higher accuracy than mixed-subject models.
 The development of subject-independent models eliminates the need to collect data from a target subject, reducing time and data collection costs during deployment. These results open new avenues for creating speech neuroprostheses when subjects cannot provide training data.  
 
+**ARTICLE UNDER REVIEW**
 
-Please contact us at this e-mail address if you have any question: cgvalle@uc.cl.
+Cite:
+```
+@article{Valle,
+    doi       = {},
+    url       = {},
+    year      = {},
+    publisher = {},
+    volume    = {},
+    number    = {},
+    pages     = {2826},
+    author    = {Carlos Valle, Carolina Méndez-Orellana, María Rodríguez-Fernández and Christian Herff},
+    title     = {Subject-independent decoding of perceived sentences from EEG signals using artificial neural networks},
+    journal   = {}
+}
+``````
+
 
 
 # Repository content
@@ -59,5 +76,8 @@ The folders included in this repository have auxiliary information that can be o
 * `ica`: Contains pre-computed ICA weights matrix using 45 components in `.fif` format. In addition, `.json` files have the classification of the components performed by ica label mne 
 * `sentences`: Original sentences presented to the volunteers in `.wav`.
 * `praat_annotations`:  Contains `.TextGrid` files with word timestamps of each sentence. 
+
+## Contact
+Please contact us at this e-mail address if you have any question: cgvalle@uc.cl.
 
 
