@@ -148,7 +148,7 @@ def create_epochs(raw, EPOCHS, subject, session):
 
             # Subjects with multiple sessions get a letter to indicate the session
             if subject == 57 or subject == 63:
-                subject = f"S{subject}{'abcd'[session-1]}"
+                subject = f"{subject}{'abcd'[session-1]}"
 
             
             EPOCHS[f"S{subject}_{condition}_{stim}"] = temp_epoch
@@ -205,7 +205,7 @@ if __name__ == '__main__':
     # General Variables
     DATASET_FOLDER_PATH = 'ds004279-download'  # Here all the subjects are stored
     ARTIFACTS_FOLDER_PATH = 'artifacts'  # Artifacts folder for each solver
-    SAVE_FOLDER = '.'    # Default is current directory
+    SAVE_FOLDER = 'npz'    # Default is current directory
     
     # Step 0. Load aux info
     index2stim = load_stimulus()
@@ -221,7 +221,7 @@ if __name__ == '__main__':
                 if 'ses-' in ses:
                     subjects_and_sessions.append((sub, ses)) 
     
-    
+
 
     EPOCHS = {}
     # Step 1. Load data
@@ -233,7 +233,7 @@ if __name__ == '__main__':
         raw = add_montage(raw)
 
         # Step 3. Remove bad ica components
-        raw = remove_ica_componenets(raw, subject, session, rejection_coinfidence=0.95)
+        raw = remove_ica_componenets(raw, subject, session, rejection_coinfidence=0.90)
     
         # Step 5. Pre-process data
         raw = pre_processing(raw, l_freq=l_freq, h_freq=h_freq, reference='average', only_language=True)

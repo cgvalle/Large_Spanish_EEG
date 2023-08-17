@@ -62,9 +62,9 @@ datalad install https://openneuro.org/git/1/ds004279
 
 
 ## Files
-To recreate the experiments, you first need to run `main_pipeline.py` followed by any of the `three model_*.ipynb`.
-* `main_pipeline.py` : Contains all the details in terms of signal processing, epochs creating, artifact removal and ica decomposition. This script generates an `.npy` file that can be read in the notebooks.
-* `model_*.ipynb`: Contains the experiments for condition classification (rest, perception and production), pairs of sentences and window size effect in the decoding accuracy.
+To recreate the experiments, you first need to run `main_pipeline.py` inside the data folder,  followed by any of the `by_*.py`.
+* `main_pipeline.py` : Contains all the details in terms of signal processing, epochs creating, artifact removal and ica decomposition. This script generates an `.npz` file that can be read in the notebooks.
+* `by_*.py`: Contains the experiments for condition classification (rest, perception and production), pairs of sentences and window size effect in the decoding accuracy.
 
 * `get_ica.py`: This script allows to re-compute the ica-weights matrix included in ica_label folder, as well as the automatic classification of the components by [ica label](https://github.com/mne-tools/mne-icalabel) mne implementation.
 
