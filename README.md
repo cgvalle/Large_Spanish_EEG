@@ -33,8 +33,8 @@ Cite:
     publisher = {},
     volume    = {},
     number    = {},
-    pages     = {},
-    author    = {Valle, Carlos and Méndez-Orellana, Carolina and  Herff, Christian and Rodríguez-Fernández, María},
+    pages     = {2826},
+    author    = {Carlos Valle, Carolina Méndez-Orellana, María Rodríguez-Fernández and Christian Herff},
     title     = {Subject-independent decoding of perceived sentences from EEG signals using artificial neural networks},
     journal   = {}
 }
