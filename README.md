@@ -77,7 +77,7 @@ To recreate the experiments, you first need to run `main_pipeline.py` inside the
 
 * `get_ica.py`: This script allows to re-compute the ica-weights matrix included in ica_label folder, as well as the automatic classification of the components by [ica label](https://github.com/mne-tools/mne-icalabel) mne implementation.
 
-* `stimulus_dict.json`: Contains the transcription of the sentences used (Spanish).
+* [stimulus_dict.json](https://github.com/cgvalle/Large_Spanish_EEG/blob/main/data/stimulus_dict.json): Contains the transcription of the sentences used (Spanish).
 
 ## Folders
 The folders included in this repository have auxiliary information that can be of interest to others.  
